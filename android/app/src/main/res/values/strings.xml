@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">waztong</string>
+    <string name="facebook_app_id">XXXX</string>
+    <string name="fb_login_protocol_scheme">fbXXXX</string>
+    <string name="facebook_client_token">XXXX</string>
+    <string name="kakao_app_key">XXXX</string>
+</resources>

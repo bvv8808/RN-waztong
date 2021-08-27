@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1083781663033-6bop9liu1doh46v7muda0838bqej4avu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1083781663033-6bop9liu1doh46v7muda0838bqej4avu</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1083781663033-2g80cchj9gr2j210fttsl32ak8u75rqi.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC2OCxL_qIUEoKKo-3mTbJjeXgL1kdMNhs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1083781663033</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.waztong</string>
+	<key>PROJECT_ID</key>
+	<string>waztong-90bab</string>
+	<key>STORAGE_BUCKET</key>
+	<string>waztong-90bab.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1083781663033:ios:b952754d7f8e6161c1c0e8</string>
+</dict>
+</plist>

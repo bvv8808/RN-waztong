@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        background-position: center;
+        background-image: url(./web-background.png);
+        background-size: cover;
+      }
+      .btn {
+        width: 70%;
+        /* margin-bottom: 30px; */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const link = () => {
+        var userAgent = navigator.userAgent;
+
+        var visitedAt = new Date().getTime();
+        var reviewIdx = window.location.search.substring(1).split('=')[1];
+        var url = `waztong://link?id=${reviewIdx}`;
+        var marketAndroid = `https://www.naver.com`;
+        var marketIos = `https://www.naver.com`;
+
+        if (userAgent.match(/iPhone|iPad|iPod/)) {
+          setTimeout(function () {
+            if (new Date().getTime() - visitedAt < 2000) {
+              location.href = marketIos;
+            }
+          }, 500);
+
+          setTimeout(function () {
+            location.href = url;
+          }, 0);
+        } else if (userAgent.match(/Android/)) {
+          if (userAgent.match(/Chrome/)) {
+            // 안드로이드의 크롬에서는 intent만 동작하기 때문에 intent로 호출해야함
+
+            setTimeout(function () {
+              location.href = `market://details?id=com.waztong`;
+            }, 1000);
+            setTimeout(function () {
+              // intent://~~~ 동작안함. (안드로이드->크롬)
+              // location.href = `intent:link?id=${liveIdx}#Intent; scheme=kooltong;package=com.kooltong; end;`;
+              location.href = url;
+            }, 0);
+          } else {
+            // 크롬 이외의 브라우저들
+
+            setTimeout(function () {
+              if (new Date().getTime() - visitedAt < 2000) {
+                location.href = marketAndroid;
+              }
+            }, 500);
+
+            var iframe = document.createElement('iframe');
+            iframe.style.visibility = 'hidden';
+            iframe.src = url;
+
+            document.body.appendChild(iframe);
+            //   document.body.removeChild(iframe); // back 호출시 캐싱될 수 있으므로 제거
+          }
+        }
+      };
+    </script>
+
+    <img src="./web-button.png" class="btn" onclick="link()" />
+  </body>
+</html>
